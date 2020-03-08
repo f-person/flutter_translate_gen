@@ -99,6 +99,8 @@ class FlutterTranslateGen extends AnnotationGenerator<TranslateKeysOptions> {
         return Casing.upperCase(key, separator: options.separator);
       case CaseStyle.lowerCase:
         return Casing.lowerCase(key, separator: options.separator);
+      case CaseStyle.camelCase:
+        return Casing.camelCase(key);
       default:
         return throw InvalidGenerationSourceError(
           "Invalid CaseStyle specified: ${options.caseStyle.toString()}",
